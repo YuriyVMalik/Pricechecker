@@ -20,3 +20,19 @@ class BarcodeScanner {
   }
 }
 new BarcodeScanner();
+
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+// Функція для повноекранного режиму
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen().catch((err) => {
+      alert(`Помилка: ${err.message}`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+// Додаємо обробник на кнопку
+fullscreenBtn.addEventListener("click", toggleFullscreen);
