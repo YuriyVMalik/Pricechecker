@@ -10,27 +10,43 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
-            <div class="header__container">
+        <div class="setting hidden">
+            <div class="setting__container">
+                <input type="text" class="setting__shop" placeholder="Код магазина (РТ0000031)">
+                <input type="text" class="setting__serverAddress" placeholder="Адрес сервера (192.168.0.100)">
+                <input type="text" class="setting__authorizationToken" placeholder="Токен авторизації">
                 
-                <div class="header__scanner scanner">
-                    <input type="text" class="scanner__input" placeholder="Відскануйте товар" autofocus>
+                <div class="setting__button">
+                    <button class="setting__resetSettings">Скинути налаштування</button>
+                    <button class="setting__defaultSetting">Налаштування за замовчуванням</button>
+                    <button class="setting__save">Зберегти</button>
                 </div>
-                <div class="header__result result">
+            </div>
+        </div>
+        
+        <div class="scanner hidden">
+             <div class="scanner__container">
+                <div class="scanner__commandPanel commandPanel">
+                    <button class="commandPanel__setting">Налаштування</button>
+                    <button class="commandPanel__fullscreen">Повний екран</button>
+                </div>
+                
+                <input type="text" class="scanner__input" placeholder="Відскануйте товар" autofocus>
+                <div class="scanner__result result">
                     <div class="result__goods">
-                        Картопля Фрі L 90г Середня
+                        
                     </div>
                     <div class="result__price">
-                       950.50 грн.
+                       
                     </div>
                     <div class="result__barCode">
                        
                     </div>
 
-                    <button id="fullscreenBtn">Повний екран</button>
+                    
                 </div>
-            </div>
-        </header>
+            </div> 
+        </div>
     </div>
     <script src="js/script.js"></script>
 </body>
